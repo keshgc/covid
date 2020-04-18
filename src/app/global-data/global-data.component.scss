@@ -1,0 +1,22 @@
+.item{
+    background: #efefef;
+    padding: 10px;
+    margin-bottom: 15px;
+    text-align: center;
+    h3{
+        margin: 0;
+        font-size: 1.3rem;
+    }
+    p{
+        margin: 0;
+    }
+
+    
+}
+.card-content{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    >.row{
+        margin-bottom: 0;
+    }
+}

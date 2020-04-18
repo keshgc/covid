@@ -1,0 +1,7 @@
+<kendo-grid [data]="data" [height]="410" [sortable]="true" [sort]="gridData.state.sort" (dataStateChange)="dataStateChange($event)">
+    <kendo-grid-column *ngFor="let col of gridData.columns" [field]="col.field" [title]="col.title" [filter]="col.filter">
+      <ng-template *ngIf="col.type=='date'" kendoGridCellTemplate let-dataItem let-rowIndex="rowIndex">{{dataItem[col.field] | date:'dd-MM-yyyy'}}</ng-template>
+      <ng-template *ngIf="col.type=='link'" kendoGridCellTemplate let-dataItem let-rowIndex="rowIndex"><a href="javascript:void(0)" (click)="redirect(dataItem)">{{dataItem[col.field]}}</a></ng-template>
+      <ng-template kendoGridCellTemplate let-dataItem let-rowIndex="rowIndex">{{dataItem[col.field] }}</ng-template>
+    </kendo-grid-column>
+  </kendo-grid>

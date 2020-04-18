@@ -1,0 +1,62 @@
+<app-loading *ngIf="!gridReady"></app-loading>
+<div class="container-fluid" *ngIf="gridReady">  
+  <div class="row">
+    <div class="col s12">
+      <p style="text-align: right;">Updated On {{updatedDate | date:'dd-MM-yyyy HH:mm:SS'}}</p>
+
+      <app-global-data *ngIf="localData.data" [data]="localData"></app-global-data>
+
+    <app-global-data *ngIf="globalData.data" [data]="globalData"></app-global-data>
+    <div class="table-view">
+      <app-k-grid  [gridData]="gridData2"></app-k-grid>
+    </div>
+    <!-- <div class="table-view">
+      <app-k-grid  [gridData]="gridData"></app-k-grid>
+    </div> -->
+
+    
+
+    <!-- <div class="table-view">
+      <table mat-table [dataSource]="dataSource"  class="mat-elevation-z8">       
+        <ng-container matColumnDef="Country">
+          <th mat-header-cell *matHeaderCellDef>Country </th>
+          <td mat-cell *matCellDef="let element"> {{element.Country}} </td>
+        </ng-container>     
+        
+        <ng-container matColumnDef="NewConfirmed">
+          <th mat-header-cell *matHeaderCellDef> New Confirmed </th>
+          <td mat-cell *matCellDef="let element"> {{element.NewConfirmed}} </td>
+        </ng-container>     
+      
+        <ng-container matColumnDef="TotalConfirmed">
+          <th mat-header-cell *matHeaderCellDef> Total Confirmed </th>
+          <td mat-cell *matCellDef="let element"> {{element.TotalConfirmed}} </td>
+        </ng-container>  
+
+          <ng-container matColumnDef="NewDeaths">
+          <th mat-header-cell *matHeaderCellDef> New Deaths </th>
+          <td mat-cell *matCellDef="let element"> {{element.NewDeaths}} </td>
+        </ng-container>
+        
+        <ng-container matColumnDef="TotalDeaths">
+          <th mat-header-cell *matHeaderCellDef> Total Deaths </th>
+          <td mat-cell *matCellDef="let element"> {{element.TotalDeaths}} </td>
+        </ng-container>
+       
+        <ng-container matColumnDef="NewRecovered">
+          <th mat-header-cell *matHeaderCellDef> New Recovered </th>
+          <td mat-cell *matCellDef="let element"> {{element.NewRecovered}} </td>
+        </ng-container>
+       
+        <ng-container matColumnDef="TotalRecovered">
+          <th mat-header-cell *matHeaderCellDef> Total Recovered</th>
+          <td mat-cell *matCellDef="let element"> {{element.TotalRecovered}} </td>
+        </ng-container>
+      
+        <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;" (click)="rowClick(row)" [class.hidden]="row.TotalConfirmed == 0"></tr>
+      </table>
+    </div> -->
+  </div>
+</div>
+</div>

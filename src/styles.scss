@@ -1,0 +1,57 @@
+/* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+    height: 100%;
+}
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    // background: rgb(0,0,0);
+    // color: #fff;
+}
+.table-view {
+    overflow: auto;
+    table{
+        min-width: 600px;    
+    }
+    
+}
+.mat-row.hidden {
+    display: none;
+}
+
+.k-grid {
+    .k-grid-header,
+    .k-grid-toolbar,
+    .k-grouping-header,
+    .k-grid-add-row,
+    .k-grid-footer {
+        background-color: #004d40;
+        color: #fff;
+    }
+    .k-grid-header .k-i-sort-asc-sm, .k-grid-header .k-i-sort-desc-sm, .k-grid-header .k-sort-order{
+        color: #ffff00;
+    }
+    .k-grid-content {
+        background: #e0f2f1;
+        color: #000;
+        //color: #fff;
+        tr {
+            &.k-alt {
+                background-color: #b2dfdb;
+            }
+            &:hover,
+            &.k-alt:hover {
+                background-color: #80cbc4;
+            }
+            td{
+                min-width: 150px;
+            }
+            a{
+                color: #ad1457;
+                white-space: nowrap;
+            }
+        }
+    }
+}
